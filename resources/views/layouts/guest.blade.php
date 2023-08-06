@@ -59,7 +59,7 @@
 </head>
 <body>
 <div id="main-container" class="container">
-    <header class="third" style="height: 13.5em; font-size: 1.5em; border:1px solid green;">
+    <header class="third" style="height: 13.5em; font-size: 1.5em;">
         {{ $header }}
     </header>
     <div class="third">
