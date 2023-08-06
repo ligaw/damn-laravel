@@ -18,24 +18,27 @@
             height: 100%;
             margin: 0;
         }
-
+        #main-container {
+            min-height: 100vh; /* Ensure container is at least the height of the viewport */
+            padding: 1em;
+        }
         .container {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure container is at least the height of the viewport */
+            /*min-height: 100vh; !* Ensure container is at least the height of the viewport *!*/
             margin: 0 auto;
+            /*padding: 1em;*/
         }
 
         .container > .third {
             /*border: 1px solid black;*/
-            padding: 1rem 0;
             flex: 1; /* Distribute equal space among children */
         }
 
         header {
             align-items: start;
             display: flex;
-            font-size: 3rem;
+            /*font-size: 3rem;*/
         }
 
         div.third {
@@ -55,8 +58,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-<div class="container">
-    <header class="third">
+<div id="main-container" class="container">
+    <header class="third" style="height: 13.5em; font-size: 1.5em; border:1px solid green;">
         {{ $header }}
     </header>
     <div class="third">
