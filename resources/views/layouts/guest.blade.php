@@ -18,10 +18,12 @@
             height: 100%;
             margin: 0;
         }
+
         #main-container {
-            min-height: 100vh; /* Ensure container is at least the height of the viewport */
-            padding: 1em;
+            /*min-height: 100vh; !* Ensure container is at least the height of the viewport *!*/
+            /*padding: 1em;*/
         }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -30,44 +32,42 @@
             /*padding: 1em;*/
         }
 
-        .container > .third {
-            /*border: 1px solid black;*/
-            flex: 1; /* Distribute equal space among children */
-        }
+        /*.container > .third {*/
+        /*    !*border: 1px solid black;*!*/
+        /*    flex: 1; !* Distribute equal space among children *!*/
+        /*}*/
 
-        header {
-            align-items: start;
-            display: flex;
-            /*font-size: 3rem;*/
-        }
+        /*header {*/
+        /*    align-items: start;*/
+        /*    display: flex;*/
+        /*    !*font-size: 3rem;*!*/
+        /*}*/
 
-        div.third {
-            align-items: start;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            font-family: 'Inter', sans-serif;
-        }
+        /*div.third {*/
+        /*    align-items: start;*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*    justify-content: flex-start;*/
+        /*    font-family: 'Inter', sans-serif;*/
+        /*}*/
 
-        footer {
-            align-items: end;
-            display: flex;
-        }
+        /*footer {*/
+        /*    align-items: end;*/
+        /*    display: flex;*/
+        /*}*/
     </style>
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-<div id="main-container" class="container">
-    <header class="third" style="height: 13.5em; font-size: 1.5em;">
-        {{ $header }}
-    </header>
-    <div class="third">
-        {{ $slot }}
-    </div>
-    <footer class="third">
-        {{ $footer }}
-    </footer>
+<body style="display:flex; flex-direction: column;">
+<header style="display: flex; font-size: 1.5em; height: 6em;background-color: black">
+    {{ $header }}
+</header>
+<div class="container" style="display: flex;flex: 2;">
+    {{ $slot }}
 </div>
+<footer style="display: flex; font-size: 1.5em; height: 6em;align-items: end;background-color:black;">
+    Footer
+</footer>
 </body>
 </html>

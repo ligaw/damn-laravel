@@ -9,7 +9,7 @@
 {{--                Sign in form--}}
             </div>
         </div>
-        <div style="height: 27em;">
+        <div style="height: 13.5em;">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div style="display: flex; flex-direction: row; height: 4.5em; width: 66%;">
@@ -52,8 +52,4 @@
             </form>
         </div>
     </div>
-
-    <x-slot:footer>
-        Footer
-    </x-slot:footer>
 </x-guest-layout>
